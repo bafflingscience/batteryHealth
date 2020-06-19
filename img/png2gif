@@ -1,0 +1,13 @@
+!#/bin/bash
+
+mkdir ../png_backup/
+
+cp * ../png_backup
+
+for f in *.png; do
+
+  convert ./"$f" ./"${f%.png}.gif"
+
+done
+
+rm *.png *.sh
